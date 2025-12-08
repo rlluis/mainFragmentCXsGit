@@ -34,7 +34,7 @@ public class AdjustTipoSolicitudesObjectAction extends BaseRestController {
 	private static final String JSON_FIELD_NAME = "jSonSolicitudes";
 
 	// API Paths for Liferay Objects.
-	private static final String GET_CLIENTE_OBJECT_ENTRY_PATH = "/o/c/itauclientes/{objectEntryId}";
+	private static final String GET_CLIENTE_OBJECT_ENTRY_PATH = "/o/c/mainObject/{objectEntryId}";
 
 	@Autowired
 	private TipoSolicitudService tipoSolicitudService;

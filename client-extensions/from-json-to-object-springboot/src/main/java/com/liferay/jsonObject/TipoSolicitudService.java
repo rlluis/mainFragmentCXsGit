@@ -15,8 +15,8 @@ import java.util.function.BiFunction;
 @Service
 public class TipoSolicitudService {
 
-	private static final String CLIENTE_RELATIONSHIP_FIELD_NAME = "r_itauClienteTipoSolicitud_c_itauClienteId";
-	private static final String POST_OBJECT_ENTRY_PATH = "/o/c/itautiposolicituds";
+	private static final String CLIENTE_RELATIONSHIP_FIELD_NAME = "r_mainObjectRelatedObject_c_PrimaryId";
+	private static final String POST_OBJECT_ENTRY_PATH = "/o/c/relatedobjects";
 	private final Random _random = new Random();
 	private final ObjectMapper _objectMapper;
 
