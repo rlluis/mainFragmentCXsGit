@@ -12,6 +12,7 @@ task zipFragments(type: Copy) {
             description = "Zips the ${fragmentDir.name} fragment."
             from(fragmentDir) {
                 into fragmentDir.name
+                exclude '**/readme.md', '**/README.md'
             }
             archiveBaseName.set(fragmentDir.name)
             destinationDirectory.set(distDir)

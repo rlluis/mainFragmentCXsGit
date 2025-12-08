@@ -6,17 +6,19 @@ This repository contains a collection of Fragments and Client Extensions for Lif
 
 Below is a list of the available Fragments. Each fragment directory contains a `README.md` with more detailed documentation.
 
-- **Swiper Carousel**: A flexible carousel based on Swiper.js, where slides are added by dropping other fragments inside it.
-- **Swiper Carousel with Collection**: A Swiper.js carousel that is dynamically populated from a Liferay asset collection.
-- **Bootstrap Carousel**: A vanilla JavaScript implementation of the Bootstrap 4 carousel, removing the jQuery dependency.
-- **Repeatable JSON Field**: A form field fragment that allows content creators to add multiple structured entries based on a configurable JSON definition.
+- **Bootstrap-SliderItem**: A draggable card specifically prepared for the Bootstrap Slider fragments.
+- **Bootstrap-slidersourroundings**: A flexible carousel based on Bootstrap Careousel, using JS to set each slide once all JS is ready. It depens on Jquery
+- **Bootstrapminjquery-slidersourroundings**: Same than the above but without the JQuery dependency.
+- **Chatbot**: a floating icon in the right bottom corner that will open a chatbot fragment that simulates a chat against a Liferay Object. Just for fun and also for quick AI predictable demos!
+- **ChatbotAIBlueprint**: same than above but this fragment is connected to Neil's Chat Springboot Client Extension so you can use it as an alternative of the classic Fragment that Neil has.
+- **Swiper Carousel**: A flexible carousel based on Swiper.js, where slides are added by dropping a Collection Display Fragment inside it. It manipulates the DOM so use with care.
+- **Swiper Carousel with Collection**: Same than above but in this case the Collection is added through Configuration so there's no DOM manipulation as all is generated in a loop with freemarker, provided by the collection configuration.
+- **Repeatable JSON Field**: A form field fragment that allows content creators to add multiple structured entries based on a specific child object. Each entry will be stored in a JSON field of the main Object and converted later on when calling the corresponding CX through an OBject Action.
 
 ## Client Extensions
 
 Below is a list of the available Client Extensions. Each extension directory contains its own `README.md` with more detailed documentation.
 
-- **From JSON to Object (Spring Boot)**: A Spring Boot backend service, likely used for processing JSON data submitted from a fragment.
+- **From JSON to Object (Spring Boot)**: A Spring Boot backend service, to convert a JSON stored in an Object into its corresponding related object.
 
 ---
-
-*This README was generated with the help of Gemini Code Assist.*
