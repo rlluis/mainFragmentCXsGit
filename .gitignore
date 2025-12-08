@@ -26,3 +26,5 @@
 /plugins-sdk/lib
 test-results
 **/docs
+**/.vs
+**/.vscode
