@@ -1,0 +1,33 @@
+[#assign carouselFade=""/]
+[#assign carouselAutoPlay=""/]
+[#if configuration.carouselFade]
+    [#assign carouselFade="carousel-fade"/]
+[/#if]
+[#if configuration.carouselAutoPlay]
+    [#assign carouselAutoPlay="data-ride='carousel'"/]
+[/#if]
+
+<div id="${fragmentEntryLinkNamespace}_carouselbootstrap"
+		class="carousel slide ${carouselFade}" ${carouselAutoPlay}
+		data-interval="${configuration.dataInterval}">
+    [#if configuration.showIndicators]
+		<ol class="carousel-indicators"></ol>
+    [/#if]
+	<div class="carousel-inner">
+		<lfr-drop-zone></lfr-drop-zone>
+	</div>
+    [#if configuration.showControls]
+		<a class="carousel-control-prev"
+				data-target="#${fragmentEntryLinkNamespace}_carouselbootstrap"
+				role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next"
+				data-target="#${fragmentEntryLinkNamespace}_carouselbootstrap"
+				role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+    [/#if]
+</div>

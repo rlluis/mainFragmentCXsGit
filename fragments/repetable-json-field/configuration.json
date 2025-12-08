@@ -1,0 +1,57 @@
+{
+	"fieldSets": [
+		{
+			"label": "Repeater Field Settings",
+			"fields": [
+				{
+					"name": "fieldLabel",
+					"label": "Field Label",
+					"description": "The label that will be displayed for this form field.",
+					"type": "text",
+					"dataType": "string",
+					"defaultValue": "Details"
+				},
+				{
+					"name": "addButtonLabel",
+					"label": "Add Button Label",
+					"description": "The text for the button that adds a new entry.",
+					"type": "text",
+					"dataType": "string",
+					"defaultValue": "Add Item"
+				},
+				{
+					"name": "fieldStructure",
+					"label": "Field Structure (JSON)",
+					"description": "Define the fields for each entry in JSON format. Use 'name', 'label', and 'type' (e.g., text, number).",
+					"dataType": "string",
+					"defaultValue": "[{\"name\": \"type\", \"label\": \"Type\", \"type\": \"select\"}, {\"name\": \"subType\", \"label\": \"SubType\", \"type\": \"select\"}, {\"name\": \"value\", \"label\": \"Value\", \"type\": \"text\"}, {\"name\": \"comment\", \"label\": \"Additional Comment\", \"type\": \"text\"}]",
+					"type": "text"
+				},
+				{
+					"name": "typePicklistERC",
+					"label": "Type Picklist ERC",
+					"description": "The External Reference Code (ERC) of the picklist for the 'Type' field.",
+					"type": "text",
+					"dataType": "string",
+					"defaultValue": ""
+				},
+				{
+					"name": "subTypePicklistERC",
+					"label": "SubType Picklist ERC",
+					"description": "The External Reference Code (ERC) of the picklist for the 'SubType' field.",
+					"type": "text",
+					"dataType": "string",
+					"defaultValue": ""
+				},
+				{
+					"name": "prefillData",
+					"label": "Prefill Data (JSON)",
+					"description": "Optional: Prefill the repeater with data. Must be a JSON array of objects matching the field structure.",
+					"type": "text",
+					"dataType": "string",
+					"defaultValue": ""
+				}
+			]
+		}
+	]
+}

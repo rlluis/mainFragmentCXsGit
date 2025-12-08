@@ -1,0 +1,38 @@
+<style>
+	.mySwiper.${fragmentEntryLinkNamespace}  {
+		--swiper-navigation-color: ${configuration.navColor};
+		--swiper-pagination-color: ${configuration.paginationColor};
+		--swiper-pagination-bottom: ${configuration.swiperPagBottom};
+	}
+	.swiper-container.mySwiper.${fragmentEntryLinkNamespace} {
+			max-width: ${configuration.containerMaxWidth}px;
+		  height: ${configuration.containerHeight}px; 
+			position: relative;  /* Anchors the arrows */
+  		padding-left: 50px;  /* Space for Left Arrow */
+  		padding-right: 50px; /* Space for Right Arrow */
+			box-sizing: border-box;
+			overflow: hidden; /* This is crucial for hiding non-active slides */	
+	}
+	.swiper-container.mySwiper.${fragmentEntryLinkNamespace}.swiper-vertical {
+		height: ${configuration.containerHeight}px; /* Override height for vertical slider */
+	}
+</style>
+
+<div class="swiper-container mySwiper ${fragmentEntryLinkNamespace}">
+	<div class="swiper-wrapper">
+		<lfr-drop-zone></lfr-drop-zone>
+	</div>
+
+	[#if configuration.showPagination]
+		<div class="swiper-pagination"></div>
+	[/#if]
+
+	[#if configuration.showNavButtons]
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+	[/#if]
+
+	[#if configuration.showScrollbar]
+		<div class="swiper-scrollbar"></div>
+	[/#if]
+</div>

@@ -1,0 +1,14 @@
+{
+  "configurationPath": "configuration.json",
+  "jsPath": "index.js",
+  "htmlPath": "index.html",
+  "cssPath": "index.css",
+  "name": "repeteable-json-field",
+  "type": "input",
+  "typeOptions": {
+    "fieldTypes": [
+      "long-text",
+      "text"
+    ]
+  }
+}

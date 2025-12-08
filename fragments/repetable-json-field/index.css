@@ -1,0 +1,14 @@
+.repeater-item {
+	display: flex;
+	align-items: flex-end;
+	gap: 1rem;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	border: 1px solid #e7e7ed;
+	border-radius: 0.25rem;
+}
+
+.repeater-item .form-group {
+	flex-grow: 1;
+	margin-bottom: 0;
+}

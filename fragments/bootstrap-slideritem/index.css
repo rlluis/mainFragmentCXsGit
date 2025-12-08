@@ -1,0 +1,53 @@
+.carousel-inner .row {
+	margin-left: 0px !important;
+}
+
+.carousel-inner .row .col {
+	padding-left: 0px !important;
+}
+
+.carousel-item .col {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.inner-carousel-item {
+	display: grid !important; /* Use !important to override conflicting display properties */
+	/* Create a single grid cell for both image and caption to overlap */
+	grid-template-areas: "carousel-content";
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	height: 100%;
+	width: 100%;
+}
+
+.inner-carousel-item > .inner-carousel-image {
+	grid-area: carousel-content;
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+	height: 100%;
+	/* Prevents image from overflowing its grid cell */
+	min-width: 0;
+	min-height: 0;
+}
+
+.inner-carousel-item .btn {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.inner-carousel-item > .carousel-caption.carousel-caption {
+	grid-area: carousel-content;
+	display: block; /* Explicitly define display to ensure proper grid item behavior */
+	align-self: end; /* Align the entire caption block to the bottom of the grid cell */
+	padding-top: 0; /* Override Bootstrap's default top padding */
+	padding-bottom: 1.25rem; /* Add some space from the bottom edge */
+}
+
+/* Replicate Bootstrap's d-none d-md-block behavior without !important */
+@media (max-width: 767.98px) {
+	.inner-carousel-item > .carousel-caption.carousel-caption {
+		display: none;
+	}
+}

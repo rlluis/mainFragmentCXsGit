@@ -1,0 +1,191 @@
+{
+  "fieldSets": [
+    {
+      "label": "Chatbot Settings",
+      "fields": [
+        {
+          "name": "botThinkingDelay",
+          "label": "Bot Thinking Delay (ms)",
+          "description": "The time in milliseconds to wait before the bot shows its response, simulating thinking.",
+          "type": "text",
+          "dataType": "int",
+          "defaultValue": "500"
+        }
+      ]
+    },
+    {
+      "label": "Liferay Object Connection",
+      "fields": [
+        {
+          "name": "objectPluralName",
+          "label": "Object Plural Name",
+          "description": "The plural name of the Liferay Object used for chat messages (e.g., 'chatmessages').",
+          "type": "text",
+          "dataType": "string",
+          "defaultValue": "chatmessages"
+        },
+        {
+          "name": "objectMessageField",
+          "label": "Object Message Field",
+          "description": "The name of the field in the Liferay Object that contains the message text (e.g., 'messageText').",
+          "type": "text",
+          "dataType": "string",
+          "defaultValue": "messageText"
+        },
+        {
+          "name": "objectScope",
+          "label": "Object Scope",
+          "description": "Select if the Liferay Object is scoped to a Site or the whole Company (Instance).",
+          "type": "select",
+          "dataType": "string",
+          "defaultValue": "site",
+          "typeOptions": {
+            "validValues": [
+              {
+                "label": "Site",
+                "value": "site"
+              },
+              {
+                "label": "Company (Instance)",
+                "value": "company"
+              }
+            ]
+          }
+        },
+        {
+          "name": "correlationIdField",
+          "label": "Correlation ID Field",
+          "description": "The name of the numeric field in the Liferay Object used to order messages (e.g., 'messageID').",
+          "type": "text",
+          "dataType": "string",
+          "defaultValue": "messageID"
+        },
+        {
+          "name": "initialCorrelationId",
+          "label": "Initial Correlation ID",
+          "description": "The starting numeric value for the first message in the sequence.",
+          "type": "text",
+          "dataType": "int",
+          "defaultValue": "1"
+        },
+        {
+          "name": "correlationIdIncrement",
+          "label": "Correlation ID Increment",
+          "description": "The value to add to the current ID to get the next message (e.g., 1 for sequential, 2 for every other).",
+          "type": "text",
+          "dataType": "int",
+          "defaultValue": "1"
+        }
+      ]
+    },
+    {
+      "label": "Appearance",
+      "fields": [
+        {
+          "name": "chatHeaderBgColor",
+          "label": "Header Background Color",
+          "description": "The background color of the chat window header.",
+          "type": "colorPicker",
+          "dataType": "string",
+          "defaultValue": "#007bff"
+        },
+        {
+          "name": "chatHeaderFontColor",
+          "label": "Header Text Color",
+          "description": "The text color of the chat window header.",
+          "type": "colorPicker",
+          "dataType": "string",
+          "defaultValue": "#ffffff"
+        },
+        {
+          "name": "launcherBgColor",
+          "label": "Launcher Background Color",
+          "description": "The background color of the chat launcher button.",
+          "type": "colorPicker",
+          "dataType": "string",
+          "defaultValue": "#007bff"
+        },
+        {
+          "name": "userMessageBgColor",
+          "label": "User Message Background Color",
+          "description": "The background color for user messages.",
+          "type": "colorPicker",
+          "dataType": "string",
+          "defaultValue": "#007bff"
+        },
+        {
+          "name": "userMessageFontColor",
+          "label": "User Message Text Color",
+          "description": "The text color for user messages.",
+          "type": "colorPicker",
+          "dataType": "string",
+          "defaultValue": "#ffffff"
+        },
+        {
+          "name": "botMessageBgColor",
+          "label": "Bot Message Background Color",
+          "description": "The background color for bot messages.",
+          "type": "colorPicker",
+          "dataType": "string",
+          "defaultValue": "#f1f1f1"
+        },
+		{
+          "name": "chatWindowBgColor",
+          "label": "Chat Window Background Color",
+          "description": "The background color of the main chat window.",
+          "type": "colorPicker",
+          "dataType": "string",
+          "defaultValue": "#f7f7f7"
+        },
+        {
+          "name": "botMessageFontColor",
+          "label": "Bot Message Font Color",
+          "description": "The text color for bot messages.",
+          "type": "colorPicker",
+          "dataType": "string",
+          "defaultValue": "#333333"
+        },
+        {
+          "name": "chatButtonBgColor",
+          "label": "Send Button Background Color",
+          "description": "The background color of the 'Send' button.",
+          "type": "colorPicker",
+          "dataType": "string",
+          "defaultValue": "#3f51b5"
+        },
+        {
+          "name": "chatButtonFontColor",
+          "label": "Send Button Font Color",
+          "description": "The text color of the 'Send' button.",
+          "type": "colorPicker",
+          "dataType": "string",
+          "defaultValue": "#ffffff"
+        },
+        {
+          "name": "launcherIconColor",
+          "label": "Launcher Icon Color",
+          "description": "The color of the icon inside the launcher button.",
+          "type": "colorPicker",
+          "dataType": "string",
+          "defaultValue": "#ffffff"
+        },
+        {
+          "name": "launcherIconSize",
+          "label": "Launcher Icon Size (px)",
+          "description": "The size of the icon inside the launcher button.",
+          "type": "text",
+          "dataType": "int",
+          "defaultValue": "28"
+        },
+        {
+          "name": "launcherIconName",
+          "label": "Launcher Icon Name",
+          "description": "The name of the Clay icon to use for the launcher (e.g., 'chat').",
+          "type": "text",
+          "dataType": "string",
+          "defaultValue": "chat"
+        }
+      ]
+    }
+  ]
+}

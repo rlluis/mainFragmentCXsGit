@@ -1,0 +1,139 @@
+{
+	"fieldSets": [
+		{
+			"label": "Display Settings",
+			"fields": [
+				{
+					"name": "isVertical",
+					"label": "Vertical Direction",
+					"description": "Display slides in a vertical orientation.",
+					"type": "checkbox",
+					"defaultValue": false
+				},
+				{
+					"name": "containerHeight",
+					"label": "Container Height (for Vertical)",
+					"description": "Set the height of the carousel container in pixels (e.g., 400). Required for vertical direction.",
+					"type": "text",
+					"defaultValue": "400"
+				},
+				{
+					"name": "containerMaxWidth",
+					"label": "Container Max Width",
+					"description": "Set the width of the slide. 600px is recommended for CUBE effect.",
+					"type": "text",
+					"defaultValue": "600"
+				},				
+				{
+					"name": "numberOfSlides",
+					"label": "Number of Slides per View",
+					"description": "Specify how many slides should be visible at once.",
+					"type": "text",
+					"defaultValue": "1"
+				},
+				{
+					"name": "centeredSlides",
+					"label": "Centered Slides",
+					"description": "If true, the active slide will be centered, not always on the left.",
+					"type": "checkbox",
+					"defaultValue": false
+				},
+				{
+					"name": "spaceBetween",
+					"label": "Space Between Slides",
+					"description": "Specify the space (in px) between slides.",
+					"type": "text",
+					"defaultValue": "30"
+				},
+				{
+					"name": "showNavButtons",
+					"label": "Show Navigation Buttons",
+					"description": "Display previous/next navigation buttons.",
+					"type": "checkbox",
+					"defaultValue": true
+				},
+				{
+					"name": "showScrollbar",
+					"label": "Show Scrollbar",
+					"description": "Display a scrollbar for the carousel.",
+					"type": "checkbox",
+					"defaultValue": false
+				},
+				{
+					"name": "loop",
+					"label": "Infinite Loop",
+					"description": "Enable continuous loop mode for the carousel.",
+					"type": "checkbox",
+					"defaultValue": false
+				},
+				{
+					"name": "showPagination",
+					"label": "Show Pagination (Dots)",
+					"description": "Display the pagination dots at the bottom.",
+					"type": "checkbox",
+					"defaultValue": true
+				},
+				{
+					"name": "swiperPagBottom",
+					"label": "Distance of Pagination from bottom",
+					"description": "Specify the space between bottom and slides.",
+					"type": "text",
+					"defaultValue": "2em"
+				},					
+				{
+					"name": "navColor",
+					"label": "Navigation Color",
+					"description": "Set the color for the next/previous arrows.",
+					"type": "colorPicker",
+					"defaultValue": "#007bff"
+				},
+				{
+					"name": "paginationColor",
+					"label": "Pagination Color",
+					"description": "Set the color for the pagination dots.",
+					"type": "colorPicker",
+					"defaultValue": "#007bff"
+				},
+				{
+					"name": "carouselEffect",
+					"label": "Carousel Effect",
+					"description": "Select the transition effect for the carousel.",
+					"type": "select",
+					"defaultValue": "slide",
+					"typeOptions": {
+						"validValues": [
+							{
+								"label": "Slide",
+								"value": "slide"
+							},
+							{
+								"label": "Cube",
+								"value": "cube"
+							},
+							{
+								"label": "Flip",
+								"value": "flip"
+							},
+							{
+								"label": "Fade",
+								"value": "fade"
+							},
+							{
+								"label": "Coverflow",
+								"value": "coverflow"
+							},
+							{
+								"label": "Cards",
+								"value": "cards"
+							},
+							{
+								"label": "Creative",
+								"value": "creative"
+							}
+						]
+					}
+				}
+			]
+		}
+	]
+}

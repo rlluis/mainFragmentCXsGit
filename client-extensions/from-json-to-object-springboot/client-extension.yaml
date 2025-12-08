@@ -1,0 +1,9 @@
+assemble:
+    - fromTask: bootJar
+
+from-json-to-object-action:
+    name: From JSON to Object Action
+    oAuth2ApplicationExternalReferenceCode: from-json-to-object-headless
+    # This must match the @RequestMapping in your RestController
+    resourcePath: /object/action/1/from-json-to-object
+    type: objectAction

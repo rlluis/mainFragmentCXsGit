@@ -1,0 +1,8 @@
+{
+	"name": "Swiper Carousel",
+	"type": "component",
+	"htmlPath": "index.html",
+	"cssPath": "index.css",
+	"jsPath": "index.js",
+	"configurationPath": "configuration.json"
+}

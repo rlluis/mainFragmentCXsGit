@@ -1,0 +1,21 @@
+// Check GETTING_STARTED.md for information regarding usage.
+
+
+task zipFragments(type: Copy) {
+    description = "Zips all fragments into a dist folder."
+    def fragmentsDir = new File(project.projectDir, 'fragments')
+    def distDir = new File(project.buildDir, 'dist/fragments')
+
+    fragmentsDir.eachDir { fragmentDir ->
+        def zipTask = tasks.create(name: "zip_${fragmentDir.name}", type: Zip) {
+            group = "Fragment"
+            description = "Zips the ${fragmentDir.name} fragment."
+            from(fragmentDir) {
+                into fragmentDir.name
+            }
+            archiveBaseName.set(fragmentDir.name)
+            destinationDirectory.set(distDir)
+        }
+        dependsOn(zipTask)
+    }
+}

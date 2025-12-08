@@ -1,0 +1,36 @@
+.swiper-container.swiper-vertical {
+	width: 100%;
+	max-width: none; /* Remove max-width for vertical slider */
+}
+
+/* Styles for Vertical Pagination */
+.swiper-container-vertical > .swiper-pagination-bullets,
+.swiper-pagination-vertical.swiper-pagination-bullets {
+	right: 10px;
+	top: 50%;
+	transform: translate3d(0px, -50%, 0);
+}
+
+.swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 6px 0;
+  display: block;
+}
+
+/* Styles for Vertical Scrollbar */
+.swiper-container-vertical > .swiper-scrollbar {
+	width: 5px;
+	height: 98%;
+}
+.swiper-container.mySwiper .swiper-button-prev {
+  left: 0;
+	width: 50px;
+}
+.swiper-container.mySwiper .swiper-button-next {
+  right: 0;
+	width: 50px;
+}	
+.swiper-container.mySwiper.swiper-vertical .swiper-button-prev {
+  left: var(--swiper-navigation-top-offset, 50%);
+	width: 50px;
+}
