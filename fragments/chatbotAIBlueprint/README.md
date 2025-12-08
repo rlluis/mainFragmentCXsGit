@@ -1,0 +1,3 @@
+# ChatBoot AI Blueprint
+
+This fragment is a chatbot floating icon that will be situated on the bottom right corner. Once you expand it, a Chat will start, fully connected to Neil Griffin's SpringBoot Client Extension that generates an answer from the top 3 results of a headless search based on the user's input. This headless search can also receive as a parameter a Blueprint so you can control what type of search is executed (Ex. Semantic Search). Neil's CX will call OpenAI to generate an answer based on this top 3 results.

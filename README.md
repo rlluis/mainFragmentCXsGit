@@ -15,6 +15,8 @@ Below is a list of the available Fragments. Each fragment directory contains a `
 - **Swiper Carousel with Collection**: Same than above but in this case the Collection is added through Configuration so there's no DOM manipulation as all is generated in a loop with freemarker, provided by the collection configuration.
 - **Repeatable JSON Field**: A form field fragment that allows content creators to add multiple structured entries based on a specific child object. Each entry will be stored in a JSON field of the main Object and converted later on when calling the corresponding CX through an OBject Action.
 
+Additionally note that on build.gradle there's a specific task to create a ZIP for each fragmnent that you can then import into Liferay DXP. It will create a ZIP under the dist/fragments folder.
+
 ## Client Extensions
 
 Below is a list of the available Client Extensions. Each extension directory contains its own `README.md` with more detailed documentation.
