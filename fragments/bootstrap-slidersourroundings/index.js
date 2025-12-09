@@ -7,10 +7,31 @@ function initializeSlider() {
 	const carouselInner = carouselElement.querySelector('.carousel-inner');
 	if (!carouselInner) return;
 
-	// Process slides from a collection display, which are wrapped in .row
-	const collectionItems = carouselInner.querySelectorAll('.row');
-	let active = 'active';
+	let collectionItems = [];
+	const rows = carouselInner.querySelectorAll('.row');
 
+	if (rows.length === 1) {
+		// If there's one row, check for columns inside to treat as slides.
+		const singleRow = rows[0];
+		const cols = singleRow.querySelectorAll('.col, [class*="col-"]');
+
+		if (cols.length > 0) {
+			// Treat columns as slides
+			cols.forEach(col => {
+				carouselInner.appendChild(col); // Move col to be a direct child of carousel-inner
+				collectionItems.push(col);
+			});
+			singleRow.remove(); // Remove the now-empty row
+		} else {
+			// One row, no columns, so the row itself is the slide
+			collectionItems = Array.from(rows);
+		}
+	} else if (rows.length > 1) {
+		// Multiple rows, treat each row as a slide
+		collectionItems = Array.from(rows);
+	}
+
+	let active = 'active';
 	collectionItems.forEach((item) => {
 		item.classList.add('carousel-item');
 		if (active) {
