@@ -2,7 +2,7 @@
 
 This fragment provides a highly configurable carousel based on the [Swiper.js](https://swiperjs.com/) library.
 
-To use it you will need to first add the SwiperCarousel, then a Collection Display Fragment and finally anything you want to map your different slides to each Item from the Collection. Once the Collection is added, please remember to set it to No Pagination and to show all items (or the number of items you want). No additional configuration at this level is needed.
+To use it you will need to first add a Container, so you can set the width of this container and also decide to have it in the middle by changing its flow to Flex Row and align center. The slides and the pagination and the buttons will fill the full space that the container is adding. Then add a SwiperCarousel inside the main container, then a Collection Display Fragment and finally anything you want to map your different slides to each Item from the Collection. Once the Collection is added, please remember to set it to No Pagination and to show all items (or the number of items you want). No additional configuration at this level is needed.
 
 The Swiper Carousel needs a very specific HTML structure to work so we are manipulating the DOM in order to get wnat's needed. This means that small issues can happen when using it on edit mode. On the other hand, the advantage is that you get a nice Carousel that is fully configurable and WYSIWYG if used with care.
 
