@@ -106,26 +106,47 @@ function initSwiper(fragmentElement) {
 }
 
 function processSlides(swiperWrapper) {
-	// Liferay wraps collection items inside a `.row` div.
-	// We find all `.row` elements that are not yet slides and add the `swiper-slide` class.    
-	const collectionItems = swiperWrapper.querySelectorAll(
-		'.row:not(.swiper-slide)'
-	);
-	
-	collectionItems.forEach(rowElement => {
-		// In the editor, the dropzone container might be a child; ignore it.
-		if (rowElement.querySelector('lfr-drop-zone')) {
-			return;
-		}
+	// Find rows that are not yet processed.
+	const rows = swiperWrapper.querySelectorAll('.row:not(.swiper-slide)');
+	let processedCount = 0;
 
-		// Add the class and, most importantly, move the element
-		// to be a direct child of the swiper-wrapper.
+	if (rows.length === 1) {
+		// If there's one row, check for columns inside to treat as slides.
+		// This handles collections configured to display items as columns in a single row.
+		const singleRow = rows[0];
+		const cols = singleRow.querySelectorAll('.col, [class*="col-"]');
+
+		if (cols.length > 0) {
+			cols.forEach(colElement => {
+				if (colElement.querySelector('lfr-drop-zone')) {
+					return; // Ignore dropzones in the editor
+				}
+				colElement.classList.add('swiper-slide');
+				swiperWrapper.appendChild(colElement); // Move col to be a direct child of the wrapper
+				processedCount++;
+			});
+
+			// If the row is now empty, remove it.
+			if (singleRow.children.length === 0) {
+				singleRow.remove();
+			}
+
+			return processedCount > 0;
+		}
+	}
+
+	// Default behavior: treat each row as a slide.
+	// This works for collections where each item is a row, or for single-row cases without cols.
+	rows.forEach(rowElement => {
+		if (rowElement.querySelector('lfr-drop-zone')) {
+			return; // Ignore dropzones in the editor
+		}
 		rowElement.classList.add('swiper-slide');
-		swiperWrapper.appendChild(rowElement);
+		swiperWrapper.appendChild(rowElement); // Ensure it's a direct child
+		processedCount++;
 	});
 
-	// Return true if we found and processed slides, false otherwise.
-	return collectionItems.length > 0;
+	return processedCount > 0;
 }
 
 function init() {
