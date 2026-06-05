@@ -1,0 +1,17 @@
+assemble:
+  - from: assets
+    into: static
+
+te-editor-config-contributor:
+  name: "TE Editor Config Contributor"
+  type: editorConfigContributor
+  url: "index.js"
+  editorConfigKeys:
+    - rich_text
+    - fragmentEntryLinkRichTextEditor
+    - contentEditor
+
+te-ai-modal-loader:
+  name: "TE AI Modal Web Component"
+  type: globalJS
+  url: "ai-modal.js"
