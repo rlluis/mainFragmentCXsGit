@@ -1,0 +1,17 @@
+assemble:
+  - from: assets
+    into: static
+
+te-editor-social-syndicator:
+  name: "TE Editor Social Syndicator"
+  type: editorConfigContributor
+  url: "index.js"
+  editorConfigKeys:
+    - rich_text
+    - fragmentEntryLinkRichTextEditor
+    - contentEditor
+
+te-social-modal-loader:
+  name: "TE Social Modal Web Component"
+  type: globalJS
+  url: "ai-modal.js"
